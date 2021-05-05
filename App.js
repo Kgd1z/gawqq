@@ -1,21 +1,36 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useState } from "react";
 import * as Font from "expo-font";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import AppLoading from "expo-app-loading";
+import { useFonts } from "expo-font";
+import HomeScreen from "./Screens/HomeScreen";
+import SignUpScreen from "./Screens/SignUpScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const [fontsLoaded] = useFonts({
+    "trirong-regular": require("./assets/fonts/Trirong-Regular.ttf"),
+    "trirong-bold": require("./assets/fonts/Trirong-Bold.ttf"),
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
+          <StatusBar style="auto" />
+          {/* <HomeScreen /> */}
+          <SignUpScreen />
+        </View>
+      </SafeAreaView>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f4f3de",
     alignItems: "center",
-    justifyContent: "center",
   },
 });

@@ -1,9 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 export default function SignUpScreen() {
+  const navigation = useNavigation();
   return (
-    <View>
+    <View style={styles.container}>
       <View style={{ position: "absolute", left: 190 }}>
         <Text
           style={{
@@ -79,7 +80,7 @@ export default function SignUpScreen() {
         />
         <Image style={{}} source={require("../assets/facebook.png")} />
       </View>
-      <View style={{ display: "flex", flexDirection: "row" }}>
+      <View style={{ display: "flex", flexDirection: "row", width: 330 }}>
         <View
           style={{
             backgroundColor: "#494d4f",
@@ -108,7 +109,11 @@ export default function SignUpScreen() {
           }}
         />
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("EmailSignUp");
+        }}
+      >
         <View
           style={{
             borderWidth: 1,
@@ -117,6 +122,7 @@ export default function SignUpScreen() {
             justifyContent: "center",
             borderRadius: 25,
             height: 45,
+            width: 330,
           }}
         >
           <Text style={{ fontWeight: "bold", color: "#494d4f" }}>
@@ -136,7 +142,7 @@ export default function SignUpScreen() {
         <Text>Existing Account?</Text>
         <Text
           style={{ color: "blue" }}
-          onPress={() => Linking.openURL("http://google.com")}
+          onPress={() => navigation.navigate("LogInScreen")}
         >
           Log In
         </Text>

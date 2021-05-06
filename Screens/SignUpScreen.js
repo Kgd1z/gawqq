@@ -141,7 +141,7 @@ export default function SignUpScreen() {
       >
         <Text>Existing Account?</Text>
         <Text
-          style={{ color: "blue" }}
+          style={{ color: "blue", textDecorationLine: "underline" }}
           onPress={() => navigation.navigate("LogInScreen")}
         >
           Log In

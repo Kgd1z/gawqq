@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -10,6 +10,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 export default function EmailSignUp() {
   const navigation = useNavigation();
+  const [isValidEmail, setisValidEmail] = useState(true);
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -46,11 +47,31 @@ export default function EmailSignUp() {
       <View style={{ paddingTop: 60, width: 300 }}>
         <Text style={{ color: "#357ea3", fontWeight: "bold" }}>Your name</Text>
         <TextInput style={styles.textinput} />
-        <Text style={{ color: "#357ea3", fontWeight: "bold" }}>Your email</Text>
+        <Text style={{ color: "#357ea3", fontWeight: "bold", marginTop: 20 }}>
+          Your email
+        </Text>
+        <TextInput
+          onChangeText={(text) => {
+            const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+            if (reg.test(text) === false) {
+              setisValidEmail(false);
+            } else {
+              setisValidEmail(true);
+            }
+          }}
+          style={styles.textinput}
+        />
+        {isValidEmail ? null : (
+          <Text style={{ color: "red", textAlign: "right", paddingTop: 5 }}>
+            Invalid email address
+          </Text>
+        )}
+
+        <Text style={{ color: "#357ea3", fontWeight: "bold", marginTop: 20 }}>
+          Password
+        </Text>
         <TextInput style={styles.textinput} />
-        <Text style={{ color: "#357ea3", fontWeight: "bold" }}>Password</Text>
-        <TextInput style={styles.textinput} />
-        <Text style={{ color: "#357ea3", fontWeight: "bold" }}>
+        <Text style={{ color: "#357ea3", fontWeight: "bold", marginTop: 20 }}>
           Confirm Password
         </Text>
         <TextInput style={styles.textinput} />
@@ -85,6 +106,5 @@ const styles = StyleSheet.create({
   textinput: {
     height: 45,
     borderBottomWidth: 1,
-    marginBottom: 20,
   },
 });

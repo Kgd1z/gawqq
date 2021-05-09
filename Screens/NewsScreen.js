@@ -42,7 +42,7 @@ export default function NewsScreen() {
             justifyContent: "center",
             borderRadius: 25,
           }}
-          onPress={() => navigation.navigate("MuteScreen")}
+          onPress={() => navigation.navigate("RecapScreen")}
         >
           <Text style={{ color: "white", fontWeight: "bold" }}>
             Start with filters

@@ -12,6 +12,7 @@ import EmailSignUp from "./Screens/EmailSignUp";
 import LogInScreen from "./Screens/LogInScreen";
 import NewsScreen from "./Screens/NewsScreen";
 import MuteScreen from "./Screens/MuteScreen";
+import RecapScreen from "./Screens/RecapScreen";
 const Stack = createStackNavigator();
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,6 +33,7 @@ export default function App() {
             <Stack.Screen name="LogInScreen" component={LogInScreen} />
             <Stack.Screen name="NewsScreen" component={NewsScreen} />
             <Stack.Screen name="MuteScreen" component={MuteScreen} />
+            <Stack.Screen name="RecapScreen" component={RecapScreen} />
           </Stack.Navigator>
         </NavigationContainer>
 

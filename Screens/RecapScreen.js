@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
+import Filtered from "../Components/Filtered";
 
 export default function RecapScreen() {
   return (
@@ -13,7 +14,7 @@ export default function RecapScreen() {
         <Text
           style={{
             fontWeight: "bold",
-            paddingTop: 20,
+            paddingTop: 25,
             fontSize: 22,
             textAlign: "center",
           }}
@@ -30,7 +31,31 @@ export default function RecapScreen() {
           You can change these later
         </Text>
       </View>
-      <View></View>
+      <View style={{ width: 300, paddingTop: 35 }}>
+        <Text style={{ fontSize: 17, fontWeight: "bold" }}>Filters</Text>
+        <Text style={{ fontSize: 13, paddingTop: 10, paddingBottom: 15 }}>
+          The main news feed will avoid:
+        </Text>
+        <View style={{ display: "flex", flexDirection: "row" }}>
+          <Filtered title="Non-news" />
+          <Filtered title="Paid News" />
+        </View>
+        <View
+          style={{
+            height: 1,
+            width: 330,
+            backgroundColor: "grey",
+            marginTop: 30,
+            alignSelf: "center",
+          }}
+        ></View>
+        <Text style={{ fontSize: 17, fontWeight: "bold", paddingTop: 20 }}>
+          Following
+        </Text>
+        <Text style={{ fontSize: 13, paddingTop: 10, paddingBottom: 15 }}>
+          Automatically tag fresh content related to:
+        </Text>
+      </View>
     </View>
   );
 }

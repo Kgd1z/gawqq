@@ -11,7 +11,7 @@ export default function SignUpScreen() {
             fontWeight: "bold",
             fontSize: 15,
             color: "#494d4f",
-            left: 90,
+            left: 110,
           }}
         >
           Skip

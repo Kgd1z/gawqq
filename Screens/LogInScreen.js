@@ -16,19 +16,21 @@ export default function LogInScreen() {
         onPress={() => {
           navigation.navigate("SignUpScreen");
         }}
+        style={{
+          alignSelf: "flex-start",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Image
           style={{
             width: 50,
             height: 50,
-            position: "absolute",
-            right: 120,
-            marginTop: 20,
           }}
           source={require("../assets/back.png")}
         />
       </TouchableOpacity>
-      <View style={{ paddingTop: 80, alignItems: "center", width: 300 }}>
+      <View style={{ paddingTop: 10, alignItems: "center", width: 300 }}>
         <Text style={{ fontSize: 25, fontFamily: "trirong-bold" }}>
           Log in to Gawq
         </Text>
@@ -109,6 +111,7 @@ export default function LogInScreen() {
           borderColor: "#a3a3a1",
           backgroundColor: "#e5e4d0",
         }}
+        onPress={() => navigation.navigate("NewsScreen")}
       >
         <Text style={{ color: "#9b9b96", fontWeight: "bold", fontSize: 18 }}>
           Log In

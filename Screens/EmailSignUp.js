@@ -17,19 +17,24 @@ export default function EmailSignUp() {
         onPress={() => {
           navigation.navigate("SignUpScreen");
         }}
+        style={{
+          alignSelf: "flex-start",
+          height: 60,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Image
           style={{
             width: 50,
             height: 50,
-            position: "absolute",
-            right: 120,
+
             marginTop: 20,
           }}
           source={require("../assets/back.png")}
         />
       </TouchableOpacity>
-      <View style={{ paddingTop: 100, alignItems: "center", width: 310 }}>
+      <View style={{ paddingTop: 40, alignItems: "center", width: 310 }}>
         <Text
           style={{
             fontFamily: "trirong-bold",
@@ -47,20 +52,41 @@ export default function EmailSignUp() {
       <View style={{ paddingTop: 60, width: 300 }}>
         <Text style={{ color: "#357ea3", fontWeight: "bold" }}>Your name</Text>
         <TextInput style={styles.textinput} />
-        <Text style={{ color: "#357ea3", fontWeight: "bold", marginTop: 20 }}>
-          Your email
-        </Text>
-        <TextInput
-          onChangeText={(text) => {
-            const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
-            if (reg.test(text) === false) {
-              setisValidEmail(false);
-            } else {
-              setisValidEmail(true);
-            }
-          }}
-          style={styles.textinput}
-        />
+        {isValidEmail ? (
+          <Text style={{ color: "#357ea3", fontWeight: "bold", marginTop: 20 }}>
+            Your email
+          </Text>
+        ) : (
+          <Text style={{ color: "red", fontWeight: "bold", marginTop: 20 }}>
+            Your email
+          </Text>
+        )}
+        {isValidEmail ? (
+          <TextInput
+            onChangeText={(text) => {
+              const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+              if (reg.test(text) === false) {
+                setisValidEmail(false);
+              } else {
+                setisValidEmail(true);
+              }
+            }}
+            style={styles.textinput}
+          />
+        ) : (
+          <TextInput
+            onChangeText={(text) => {
+              const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+              if (reg.test(text) === false) {
+                setisValidEmail(false);
+              } else {
+                setisValidEmail(true);
+              }
+            }}
+            style={{ height: 45, borderBottomWidth: 1, borderColor: "red" }}
+          />
+        )}
+
         {isValidEmail ? null : (
           <Text style={{ color: "red", textAlign: "right", paddingTop: 5 }}>
             Invalid email address

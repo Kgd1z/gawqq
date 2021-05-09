@@ -10,6 +10,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import EmailSignUp from "./Screens/EmailSignUp";
 import LogInScreen from "./Screens/LogInScreen";
+import NewsScreen from "./Screens/NewsScreen";
+import MuteScreen from "./Screens/MuteScreen";
 const Stack = createStackNavigator();
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,6 +30,8 @@ export default function App() {
             <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
             <Stack.Screen name="EmailSignUp" component={EmailSignUp} />
             <Stack.Screen name="LogInScreen" component={LogInScreen} />
+            <Stack.Screen name="NewsScreen" component={NewsScreen} />
+            <Stack.Screen name="MuteScreen" component={MuteScreen} />
           </Stack.Navigator>
         </NavigationContainer>
 

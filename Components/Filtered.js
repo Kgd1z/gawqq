@@ -10,7 +10,14 @@ export default function Filtered(props) {
         style={{ width: 19, height: 19 }}
         source={require("../assets/block.png")}
       />
-      <Text style={{ paddingLeft: 4, paddingRight: 30, fontSize: 13 }}>
+      <Text
+        style={{
+          paddingLeft: 4,
+          paddingRight: 30,
+          fontSize: 13,
+          fontWeight: "bold",
+        }}
+      >
         {props.title}
       </Text>
     </View>

@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import Filtered from "../Components/Filtered";
+import Liked from "../Components/Liked";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function RecapScreen() {
   return (
@@ -56,6 +58,36 @@ export default function RecapScreen() {
           Automatically tag fresh content related to:
         </Text>
       </View>
+      <View
+        style={{
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+
+          width: 300,
+          height: 100,
+          marginBottom: 40,
+        }}
+      >
+        <Liked title="Tech" />
+        <Liked title="Science" />
+        <Liked title="Design" />
+        <Liked title="Business" />
+        <Liked title="Stocks" />
+        <Liked title="Travel" />
+      </View>
+
+      <TouchableOpacity
+        style={{
+          backgroundColor: "#FFC62B",
+          width: 300,
+          height: 40,
+          borderRadius: 30,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Text style={{ color: "white", fontWeight: "bold" }}>All done</Text>
+      </TouchableOpacity>
     </View>
   );
 }

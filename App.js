@@ -14,6 +14,7 @@ import NewsScreen from "./Screens/NewsScreen";
 import MuteScreen from "./Screens/MuteScreen";
 import RecapScreen from "./Screens/RecapScreen";
 import PaywallScreen from "./Screens/PaywallScreen";
+import FilterScreen from "./Screens/FilterScreen";
 const Stack = createStackNavigator();
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -36,6 +37,7 @@ export default function App() {
             <Stack.Screen name="MuteScreen" component={MuteScreen} />
             <Stack.Screen name="RecapScreen" component={RecapScreen} />
             <Stack.Screen name="PaywallScreen" component={PaywallScreen} />
+            <Stack.Screen name="FilterScreen" component={FilterScreen} />
           </Stack.Navigator>
         </NavigationContainer>
 

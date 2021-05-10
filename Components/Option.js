@@ -11,7 +11,7 @@ export default function Option(props) {
         marginBottom: 30,
       }}
     >
-      <View style={{ width: 200 }}>
+      <View style={{ width: 150, marginRight: 35 }}>
         <Text style={{ fontSize: 20, fontWeight: "bold", paddingBottom: 7 }}>
           {props.title}
         </Text>

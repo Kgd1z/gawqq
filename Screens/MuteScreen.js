@@ -16,7 +16,7 @@ export default function MuteScreen() {
             paddingTop: 30,
             fontSize: 15,
             textAlign: "center",
-            paddingBottom: 50,
+            paddingBottom: 40,
           }}
         >
           Turn off the types of news and content you dont want appearing in your
@@ -45,7 +45,7 @@ export default function MuteScreen() {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 25,
-          marginTop: 40,
+          marginTop: 20,
         }}
         onPress={() => navigation.navigate("PaywallScreen")}
       >

@@ -60,7 +60,7 @@ export default function PaywallScreen() {
           borderRadius: 25,
           marginTop: 100,
         }}
-        onPress={() => navigation.navigate("PaywallScreen")}
+        onPress={() => navigation.navigate("FilterScreen")}
       >
         <Text style={{ color: "white", fontWeight: "bold" }}>Next</Text>
       </TouchableOpacity>

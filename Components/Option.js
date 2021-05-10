@@ -15,7 +15,7 @@ export default function Option(props) {
         <Text style={{ fontSize: 20, fontWeight: "bold", paddingBottom: 7 }}>
           {props.title}
         </Text>
-        <Text style={{}}>{props.description}</Text>
+        <Text style={{ fontSize: 13 }}>{props.description}</Text>
       </View>
       <View
         style={{ justifyContent: "center", marginLeft: 40, marginRight: 30 }}

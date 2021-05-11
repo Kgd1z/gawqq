@@ -114,6 +114,7 @@ export default function EmailSignUp() {
           borderColor: "#a3a3a1",
           backgroundColor: "#e5e4d0",
         }}
+        onPress={() => navigation.navigate("NewsScreen")}
       >
         <Text style={{ color: "#9b9b96", fontWeight: "bold", fontSize: 18 }}>
           Create an account

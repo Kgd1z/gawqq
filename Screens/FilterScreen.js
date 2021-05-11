@@ -2,7 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Option from "../Components/Option";
+import { useNavigation } from "@react-navigation/native";
 export default function FilterScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={{ paddingTop: 50, alignItems: "center", width: 300 }}>

@@ -7,6 +7,18 @@ export default function FilterScreen() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
+      <View style={{ position: "absolute", right: 20 }}>
+        <TouchableOpacity onPress={() => navigation.navigate("NewsScreen")}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: "bold",
+            }}
+          >
+            Exit
+          </Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ paddingTop: 50, alignItems: "center", width: 300 }}>
         <Image
           style={{ width: 128, height: 128 }}

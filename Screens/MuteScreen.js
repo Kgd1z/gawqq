@@ -6,6 +6,18 @@ export default function MuteScreen() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
+      <View style={{ position: "absolute", right: 20 }}>
+        <TouchableOpacity onPress={() => navigation.navigate("NewsScreen")}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: "bold",
+            }}
+          >
+            Exit
+          </Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ paddingTop: 50, alignItems: "center", width: 300 }}>
         <Image source={require("../assets/silence.png")} />
         <Text style={{ fontWeight: "bold", paddingTop: 30, fontSize: 25 }}>

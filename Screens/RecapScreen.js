@@ -3,11 +3,24 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import Filtered from "../Components/Filtered";
 import Liked from "../Components/Liked";
 import { TouchableOpacity } from "react-native-gesture-handler";
-
+import { useNavigation } from "@react-navigation/native";
 export default function RecapScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={{ textAlign: "right" }}>Exit</Text>
+      <View style={{ position: "absolute", right: 20 }}>
+        <TouchableOpacity onPress={() => navigation.navigate("NewsScreen")}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: "bold",
+            }}
+          >
+            Exit
+          </Text>
+        </TouchableOpacity>
+      </View>
+
       <View style={{ alignItems: "center" }}>
         <Image
           style={{ width: 160, height: 160, marginTop: 40 }}

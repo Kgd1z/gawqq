@@ -42,8 +42,6 @@ export default function App() {
             <Stack.Screen name="FollowScreen" component={FollowScreen} />
           </Stack.Navigator>
         </NavigationContainer>
-
-        {/* <HomeScreen /> */}
       </SafeAreaView>
     );
   }

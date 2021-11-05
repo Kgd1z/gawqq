@@ -5,7 +5,7 @@ export default function SignUpScreen() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <View style={{ position: "absolute", left: 190 }}>
+      <View style={{ position: "absolute", left: 250 }}>
         <Text
           style={{
             fontWeight: "bold",

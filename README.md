@@ -35,9 +35,14 @@ A [@gyebi_dee](https://twitter.com/gyebi_dee) React Showcase Project.
      <img src="https://github.com/Kgd1z/gawqq/blob/main/screenshots/8.PNG" />
     </td>
     
+</tr>
 <tr>
-
+<td>
    <img src="https://github.com/Kgd1z/gawqq/blob/main/screenshots/9.PNG" />
+
+</td>
+
+</tr>
   
  
     
